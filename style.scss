@@ -1,0 +1,116 @@
+@import 'variables';
+@import 'mixins';
+  
+  
+// Header Styling
+  .header {
+    background-color: $primary-color;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    &__logo {
+      &-text {
+        @include responsive-font(1.5rem, 2.5rem);
+        font-family: 'Georgia', serif;
+        color: white;
+        font-weight: bold;
+      }
+    }
+  
+    &__nav {
+      @include flex-center;
+  
+      &-list {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+  
+      &-item {
+        margin-right: 20px;
+      }
+  
+      &-link {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        
+        &:hover {
+          color: darken($secondary-color, 10%);
+        }
+  
+        &::after {
+          content: '';
+          display: block;
+          width: 0;
+          height: 2px;
+          background: $secondary-color;
+          transition: width 0.5s;
+        }
+  
+        &:hover::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+  
+// Main Content and Cards Styling
+  .main-content {
+    background-color: $secondary-color;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .cards {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+  }
+  
+// Card Styling
+  .card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 20px;
+    flex: 1 1 45%; 
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+  
+    &__title {
+      @include responsive-font(1.25rem, 1.75rem);
+      margin-bottom: 10px;
+      color: $primary-color;
+      font-weight: bold;
+    }
+  
+    &__description {
+      font-size: 1rem;
+      color: darken($primary-color, 15%);
+    }
+  }
+  
+  // Footer Styling
+  .footer {
+    background-color: $background-color;
+    padding: 20px;
+    text-align: center;
+    color: whitesmoke;
+  
+    &__text {
+      font-size: 0.875rem;
+    }
+  }
+  

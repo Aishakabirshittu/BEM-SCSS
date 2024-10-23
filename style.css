@@ -1,0 +1,105 @@
+.header {
+  background-color: #C8A2C8;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo-text {
+  font-size: 1.5rem;
+  font-family: "Georgia", serif;
+  color: white;
+  font-weight: bold;
+}
+@media (min-width: 768px) {
+  .header__logo-text {
+    font-size: 2.5rem;
+  }
+}
+.header__nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.header__nav-item {
+  margin-right: 20px;
+}
+.header__nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.header__nav-link:hover {
+  color: #eaeab4;
+}
+.header__nav-link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #F5F5DC;
+  transition: width 0.5s;
+}
+.header__nav-link:hover::after {
+  width: 100%;
+}
+
+.main-content {
+  background-color: #F5F5DC;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 20px;
+  flex: 1 1 45%;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+.card__title {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+  color: #C8A2C8;
+  font-weight: bold;
+}
+@media (min-width: 768px) {
+  .card__title {
+    font-size: 1.75rem;
+  }
+}
+.card__description {
+  font-size: 1rem;
+  color: #ac72ac;
+}
+
+.footer {
+  background-color: #4B7F52;
+  padding: 20px;
+  text-align: center;
+  color: whitesmoke;
+}
+.footer__text {
+  font-size: 0.875rem;
+}/*# sourceMappingURL=style.css.map */
